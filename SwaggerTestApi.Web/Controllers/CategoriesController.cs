@@ -46,7 +46,12 @@ namespace WebApplication1.Controllers
             }
 
             var jsonStr = await reader.ReadToEndAsync();
-            var res = JsonConvert.DeserializeObject<Category[]>(jsonStr);
+            var categorys = JsonConvert.DeserializeObject<Category[]>(jsonStr) ?? Array.Empty<Category>();
+            var res = categorys.Where(c => c.CategoryId == id).FirstOrDefault();
+            if (res == null)
+            {
+                return NotFound();
+            }
 
             return Ok(res);
         }
