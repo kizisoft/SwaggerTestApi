@@ -18,7 +18,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        [SwaggerResponse(StatusCodes.Status200OK, "Returns all Employees", typeof(Employee))]
+        [SwaggerResponse(StatusCodes.Status200OK, "Returns all Employees", typeof(Employee[]))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "The Employee data is invalid")]
         public async Task<IActionResult> Get()
         {

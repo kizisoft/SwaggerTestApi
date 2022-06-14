@@ -18,7 +18,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        [SwaggerResponse(StatusCodes.Status200OK, "Returns all Customers", typeof(Customer))]
+        [SwaggerResponse(StatusCodes.Status200OK, "Returns all Customers", typeof(Customer[]))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "The Customer data is invalid")]
         public async Task<IActionResult> Get()
         {

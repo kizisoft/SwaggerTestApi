@@ -18,20 +18,20 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        [SwaggerResponse(StatusCodes.Status200OK, "Returns all Categories", typeof(Category))]
+        [SwaggerResponse(StatusCodes.Status200OK, "Returns all Categories", typeof(Category[]))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "The Category data is invalid")]
-        public async Task<Category[]> Get()
+        public async Task<IActionResult> Get()
         {
             using var reader = this.helperService.GetFileAsStreamReader("categories.json");
             if (reader == null)
             {
-                return new List<Category>().ToArray();
+                BadRequest();
             }
 
             var jsonStr = await reader.ReadToEndAsync();
             var res = JsonConvert.DeserializeObject<Category[]>(jsonStr);
 
-            return res;
+            return Ok(res);
         }
 
         [HttpGet("{id}")]
