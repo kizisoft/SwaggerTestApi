@@ -1,0 +1,138 @@
+[
+  {
+    "Age": 55,
+    "HireDate": "1997-05-29T00:00:00",
+    "ID": 1,
+    "Name": "Johnathan Winchester",
+    "Employees": [
+      {
+        "Age": 43,
+        "Name": "Michael Burke",
+        "HireDate": "1997-01-06T00:00:00",
+        "Employees": [
+          {
+            "Age": 35,
+            "HireDate": "1997-03-27T00:00:00",
+            "ID": 6,
+            "Name": "Roland Mendel"
+          }
+        ],
+        "ID": 3
+      },
+      {
+        "Age": 29,
+        "HireDate": "1997-04-02T00:00:00",
+        "ID": 2,
+        "Name": "Thomas Anderson",
+        "Employees": []
+      },
+      {
+        "Age": 31,
+        "HireDate": "1997-04-02T00:00:00",
+        "ID": 11,
+        "Name": "Monica Reyes",
+        "Employees": [
+          {
+            "Age": 35,
+            "HireDate": "1997-03-27T00:00:00",
+            "ID": 6,
+            "Name": "Roland Mendel"
+          },
+          {
+            "Age": 44,
+            "HireDate": "1997-05-19T00:00:00",
+            "ID": 12,
+            "Name": "Sven Cooper"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Age": 42,
+    "HireDate": "1997-07-02T00:00:00",
+    "ID": 4,
+    "Name": "Ana Sanders",
+    "Employees": [
+      {
+        "Age": 44,
+        "HireDate": "1997-05-19T00:00:00",
+        "ID": 14,
+        "Name": "Laurence Johnson"
+      },
+      {
+        "Age": 25,
+        "Employees": [
+          {
+            "Age": 39,
+            "HireDate": "1997-06-17T00:00:00",
+            "ID": 13,
+            "Name": "Trevor Ashworth"
+          }
+        ],
+        "HireDate": "1997-06-20T00:00:00",
+        "ID": 5,
+        "Name": "Elizabeth Richards"
+      }
+    ]
+  },
+  {
+    "Age": 49,
+    "HireDate": "1997-06-09T00:00:00",
+    "ID": 18,
+    "Name": "Victoria Lincoln",
+    "Employees": [
+      {
+        "Age": 44,
+        "Employees": [],
+        "HireDate": "1997-07-07T00:00:00",
+        "ID": 17,
+        "Name": "Antonio Moreno"
+      }
+    ]
+  },
+  {
+    "Age": 61,
+    "HireDate": "1997-08-28T00:00:00",
+    "ID": 10,
+    "Name": "Yang Wang",
+    "Employees": [
+      {
+        "Age": 50,
+        "HireDate": "1997-07-09T00:00:00",
+        "ID": 7,
+        "Name": "Pedro Rodriguez",
+        "Employees": [
+          {
+            "Age": 25,
+            "HireDate": "1997-07-23T00:00:00",
+            "ID": 15,
+            "Name": "Patricia Simpson",
+            "Employees": []
+          },
+          {
+            "Age": 39,
+            "HireDate": "1997-07-02T00:00:00",
+            "ID": 9,
+            "Name": "Francisco Chang",
+            "Employees": []
+          },
+          {
+            "Age": 25,
+            "HireDate": "1997-07-30T00:00:00",
+            "ID": 16,
+            "Name": "Peter Lewis",
+            "Employees": []
+          }
+        ]
+      },
+      {
+        "Age": 27,
+        "HireDate": "1997-08-11T00:00:00",
+        "ID": 8,
+        "Name": "Casey Harper",
+        "Employees": []
+      }
+    ]
+  }
+]

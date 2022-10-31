@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using SwaggerTestApi.Web.Models;
 using Swashbuckle.AspNetCore.Annotations;
 using WebApplication1.Models;
 using WebApplication1.Services;
@@ -30,6 +31,23 @@ namespace WebApplication1.Controllers
 
             var jsonStr = await reader.ReadToEndAsync();
             var res = JsonConvert.DeserializeObject<Employee[]>(jsonStr);
+
+            return Ok(res);
+        }
+
+        [HttpGet("hierarchical")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Returns all HierarchicalEmployees", typeof(HierarchicalEmployee[]))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "The HierarchicalEmployee data is invalid")]
+        public async Task<IActionResult> GetHierarchicalEmployee()
+        {
+            using var reader = this.helperService.GetFileAsStreamReader("hierarchicalEmployees.json");
+            if (reader == null)
+            {
+                return BadRequest();
+            }
+
+            var jsonStr = await reader.ReadToEndAsync();
+            var res = JsonConvert.DeserializeObject<HierarchicalEmployee[]>(jsonStr);
 
             return Ok(res);
         }
